@@ -6,6 +6,9 @@
             {{ e }}
         </div>
 
+        <button v-on:click="findAll">Click</button>
+
+        {{ msj }}
 
     </div>
 </template>
@@ -14,9 +17,17 @@
 export default {
     data(){
         return {
+            msj: "... :C",
             elements:["Uno", "Dos", "Tres"]
         };
-    }
+    }, 
+    methods: {
+        findAll: function(){
+            fetch('http://127.0.0.1:8000/api/element/?format=json')
+            .then(res => res.json())
+            .then(res => console.log(res))
+        }
+    },
 }
 </script>
 
