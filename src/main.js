@@ -18,8 +18,8 @@ Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 
 const routes = [
-  { path: '/', component: List },
-  { path: '/detail/:id', component: Detail },
+  { path: '/', component: List, name: 'list' },
+  { path: '/detail/:id', component: Detail, name: 'detail' },
   { path: '/category/:id/elements', component: ListCategory, name: 'list-category' },
   { path: '/type/:id/elements', component: ListType, name: 'list-type' }
 ]
