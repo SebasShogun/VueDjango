@@ -1,30 +1,22 @@
 <template>
   <div id="app">
-    <List></List>
+    <Header/>
+
+    <router-link to="/">List</router-link>
+    <router-link to="/detail">Detail</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
-import List from './components/List.vue'
-//import Detail from './components/Detail.vue'
+
+import Header from './components/Header.vue'
 
 export default {
   name: 'App',
   components: {
-    List
-    //Detail
+    Header
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
